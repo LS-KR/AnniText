@@ -1,0 +1,8 @@
+.idea/
+.vscode/
+.vs/
+.DS_Store/
+node_modules/
+dist/
+*.zip
+*.compiled

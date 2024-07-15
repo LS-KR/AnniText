@@ -15,6 +15,9 @@
     ],
     "files": [
       "extension.ts",
-      "prefs.ts"
+      "prefs.ts",
+      "config.ts",
+      "data.ts",
+      "helper.ts"
     ],
   }

@@ -9,21 +9,38 @@ import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/ex
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
+import {an} from './config.js';
+import {ifor, scheduledLoopTask} from './helper.js'
+
+let i = 0;
+
 const Indicator = GObject.registerClass(
     class Indicator extends PanelMenu.Button {
         _init() {
             super._init(0.0, 'My Shiny Indicator');
 
             const now = new Date();
-            const start = new Date(2022, 7, 22, 0, 0, 0);
-    
-            this.add_child(new St.Label({ 
-                text: `枫芷纪日 ${((now.getTime() - start.getTime()) / 86400000) | 0} 天`, 
+
+            let label = new St.Label({ 
+              text: `${an[i].name} ${((now.getTime() - an[i].date.getTime()) / 86400000) | 0} 天`, 
+              x_align: Clutter.ActorAlign.START,
+              y_align: Clutter.ActorAlign.CENTER, 
+              style_class: 'panel-button' 
+            })
+
+            this.add_child(label);
+
+            scheduledLoopTask(5000, () => {
+              i = ifor(i, an.length)
+              this.remove_child(label);
+              label = new St.Label({ 
+                text: `${an[i].name} ${((now.getTime() - an[i].date.getTime()) / 86400000) | 0} 天`, 
                 x_align: Clutter.ActorAlign.START,
                 y_align: Clutter.ActorAlign.CENTER, 
-                style_class: 'panel-button', 
-                track_hover: true
-            }));
+                style_class: 'panel-button' 
+              })
+              this.add_child(label);
+            })
         }
     }
 )

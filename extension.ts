@@ -30,7 +30,7 @@ const Indicator = GObject.registerClass(
 
             this.add_child(label);
 
-            scheduledLoopTask(5000, () => {
+            this.connect('button-press-event', () => {
               i = ifor(i, an.length)
               this.remove_child(label);
               label = new St.Label({ 

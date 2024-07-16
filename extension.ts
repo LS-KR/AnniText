@@ -22,7 +22,7 @@ const Indicator = GObject.registerClass(
             const now = new Date();
 
             let label = new St.Label({ 
-              text: `${an[i].name} ${((now.getTime() - an[i].date.getTime()) / 86400000) | 0} 天`, 
+              text: `${an[i].name} ${(((now.getTime() - an[i].date.getTime()) / 86400000) | 0) + 1} 天`, 
               x_align: Clutter.ActorAlign.START,
               y_align: Clutter.ActorAlign.CENTER, 
               style_class: 'panel-button' 
@@ -34,7 +34,7 @@ const Indicator = GObject.registerClass(
               i = ifor(i, an.length)
               this.remove_child(label);
               label = new St.Label({ 
-                text: `${an[i].name} ${((now.getTime() - an[i].date.getTime()) / 86400000) | 0} 天`, 
+                text: `${an[i].name} ${(((now.getTime() - an[i].date.getTime()) / 86400000) | 0) + 1} 天`, 
                 x_align: Clutter.ActorAlign.START,
                 y_align: Clutter.ActorAlign.CENTER, 
                 style_class: 'panel-button' 

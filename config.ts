@@ -6,5 +6,6 @@ export const an = [
     {name: '双生纪日', date: (new Date(2023, 8, 29, 0, 0, 0))},
     {name: '霜月纪日', date: (new Date(2023, 11, 8, 0, 0, 0))},
     {name: '霖枠纪日', date: (new Date(2024, 0, 15, 0, 0, 0))},
-    {name: '紫茗纪日', date: (new Date(2024, 6, 15, 0, 0, 0))}
+    {name: '海色纪日', date: (new Date(2024, 5, 8, 7, 52, 0))},
+    {name: '紫茗纪日', date: (new Date(2024, 6, 5, 0, 0, 0))}
 ].reverse() as An[]

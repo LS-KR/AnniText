@@ -8,4 +8,6 @@ export const an = [
     {name: '霖枠纪日', date: (new Date(2024, 0, 15, 0, 0, 0))},
     {name: '海色纪日', date: (new Date(2024, 5, 8, 7, 52, 0))},
     {name: '紫茗纪日', date: (new Date(2024, 6, 5, 0, 0, 0))}
-].reverse() as An[]
+].sort((a, b) => {
+    return a.date.getTime() - b.date.getTime()
+}).reverse() as An[]

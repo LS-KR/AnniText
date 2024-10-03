@@ -3,7 +3,7 @@
     "description": "Anni Text",
     "uuid": "annitext@elihuso",
     "shell-version": [
-      "46"
+        "46",
+        "47"
     ]
-  }
-  
+}

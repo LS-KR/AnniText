@@ -7,7 +7,10 @@ export const an = [
     {name: '霜月纪日', date: (new Date(2023, 11, 8, 0, 0, 0))},
     {name: '霖枠纪日', date: (new Date(2024, 0, 15, 0, 0, 0))},
     {name: '海色纪日', date: (new Date(2024, 5, 8, 7, 52, 0))},
-    {name: '紫茗纪日', date: (new Date(2024, 6, 5, 0, 0, 0))}
+    {name: '紫茗纪日', date: (new Date(2024, 6, 5, 0, 0, 0))},
+    {name: '风和纪日', date: (new Date(2024, 7, 4, 0, 0, 0))},
+    {name: '琼依纪日', date: (new Date(2024, 8, 18, 0, 0, 0))},
+    {name: '潮帆轻语', date: (new Date(2024, 9, 24, 0, 0, 0))}
 ].sort((a, b) => {
     return a.date.getTime() - b.date.getTime()
 }).reverse() as An[]

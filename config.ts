@@ -16,7 +16,8 @@ export const an = [
     {name: '浮世繪夢', date: (new Date(2024, 11, 22, 0, 0, 0))},
     {name: '白雲飄絮', date: (new Date(2025, 1, 6, 0, 0, 0))},
     {name: '無夢殘願', date: (new Date(2025, 1, 20, 0, 0, 0))},
-    {name: '海崖冬淚', date: (new Date(2025, 2, 17, 12, 0, 0))}
+    {name: '海崖冬淚', date: (new Date(2025, 2, 17, 12, 0, 0))},
+    {name: '锐明残月', date: (new Date(2025, 3, 26, 2, 50, 0))},
 ].sort((a, b) => {
     return a.date.getTime() - b.date.getTime()
 }).reverse() as An[]
